@@ -1,4 +1,4 @@
-// src/context.jsx
+
 import React from 'react';
 
 // Componente Hijo que recibe el saludo como prop
