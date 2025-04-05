@@ -3,6 +3,8 @@ import * as React from "react";
 import BasicTable from "./mitabla.jsx";
 import Boton from "./boton.jsx";
 import SaludoPadre from "./context.jsx"; // Importa el componente padre
+import API from "./api.jsx"; // Importa el componente de la API
+import { Tab } from "@mui/material";
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
       <p> Crear un componente padre que contenga un saludo y un componente hijo que muestre el saludo.</p>
       <p>  El saludo debe ser pasado como props desde el padre al hijo.</p>
       <SaludoPadre /> {/* Renderiza el componente padre */}
+      <h2>Actividad 4</h2>
+      <p>Investiga el uso de FETCH para traer datos de una API gratuita de Usuarios</p>
+      <API /> {/* Renderiza la tabla de la API */}
     </div>
   );
 }

@@ -16,6 +16,6 @@ function SaludoPadre() {
     </div>
   );
 }
-
+//xd
 // Exporta el componente padre para poder usarlo en App.jsx
 export default SaludoPadre;

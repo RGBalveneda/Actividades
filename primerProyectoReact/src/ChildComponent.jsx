@@ -1,4 +1,4 @@
-// src/ChildComponent.jsx
+
 import React from 'react';
 import GrandchildComponent from './GrandChildComponent.jsx';
 
