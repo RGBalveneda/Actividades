@@ -1,8 +1,8 @@
 /* Estilos Generales y Variables Raíz */
 :root {
   /* Puedes definir variables de color aquí si lo deseas para reutilizarlas */
-  --primary-color: #007bff;
-  --primary-hover-color: #0056b3;
+  --primary-color: #1f07f3;
+  --primary-hover-color: #00aaff;
   --success-color: #28a745;
   --text-color: #213547; /* Color de texto oscuro (de main.css) */
   --paragraph-color: #555; /* Color específico para párrafos */

@@ -11,7 +11,7 @@ import Boton from "./boton.jsx";
 import SaludoPadre from "./context.jsx"; // Importa el componente padre
 import API from "./api.jsx"; // Importa el componente de la API
 import Header from "./components/Header.jsx";
-
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
@@ -29,6 +29,7 @@ function App() {
           <Route path="/Actividad4" element={<API />} /> {/* Renderiza la tabla de la API */}
           <Route path="*" element={<NoPage />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
 
     </div>

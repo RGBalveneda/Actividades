@@ -24,6 +24,7 @@ export default function Home() {
                                                     className="mt-6 w-80 h-auto rounded-lg shadow-lg" 
                  />
 
+
             </main>
         </div>
     );
