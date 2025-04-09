@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Footer from './components/Footer';
+
 
 // Componente Hijo que recibe el saludo como prop
 function SaludoHijo(props) {
@@ -14,7 +14,6 @@ function SaludoPadre() {
     <div>
       <h3>Componente Padre (Saludo)</h3>
       <SaludoHijo mensaje={saludo} />
-      <Footer />
     </div>
   );
 }

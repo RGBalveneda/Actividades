@@ -3,7 +3,6 @@ import { AppBar, Toolbar, Typography, Button, Stack, Box } from '@mui/material';
 export default function Header() {
   // Datos para los botones de navegación
   const navItems = [
-    { label: '', href: '/' },
     { label: 'Home', href: '/home' },
     { label: 'About', href: '/about' },
     { label: 'Services', href: '/services' },
@@ -29,7 +28,7 @@ export default function Header() {
             fontWeight: 'bold', // Negrita (similar a font-bold)
           }}
         >
-          My Website
+       Repositorio de Actividades
         </Typography>
 
         {/* Usamos Stack para agrupar y espaciar los botones */}

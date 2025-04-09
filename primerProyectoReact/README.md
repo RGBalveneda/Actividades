@@ -1,12 +1,12 @@
-# React + Vite
+• Qué aprendieron.
+Aprendi a crear una homepage y un sistema de enrutamiento para crear varias paginas y enlazarlas entre si para
+navegar entre ellas (y tambien un poco de css y html en el proceso)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+• Qué dificultades encontraron.
+Al principio fue entender como funcionaban, pero despues todo fue mucho mas facil
 
-Currently, two official plugins are available:
+• Cómo resolvieron el enrutamiento.
+Viendo videos, apoyandome en chatgpt y copilot de modo que lo que aprendi en el video lo podia 
+aplicar  y en caso de que necesitara conocer algo en especifico, preguntarle a gpt
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+URL del repositorio: https://github.com/RGBalveneda/Actividades.git

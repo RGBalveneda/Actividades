@@ -6,7 +6,6 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import Footer from "./components/Footer";
 import './App.css'
 
 
@@ -50,7 +49,6 @@ export default function BasicTable() {
         </TableBody>
       </Table>
     </TableContainer>
-    <Footer />
     </div>
   );
 }
