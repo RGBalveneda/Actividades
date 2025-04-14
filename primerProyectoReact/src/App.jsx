@@ -10,14 +10,12 @@ import BasicTable from "./mitabla.jsx";
 import Boton from "./boton.jsx";
 import SaludoPadre from "./context.jsx"; // Importa el componente padre
 import API from "./api.jsx"; // Importa el componente de la API
-import Header from "./components/Header.jsx";
-
+import Intro from "./maps.jsx";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-      <Header />
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -27,10 +25,10 @@ function App() {
           <Route path="/Actividad2" element={<Boton />} />
           <Route path="/Actividad3" element={<SaludoPadre />} /> {/* Renderiza el componente padre */}
           <Route path="/Actividad4" element={<API />} /> {/* Renderiza la tabla de la API */}
+          <Route path="/Actividad5" element={<Intro />} /> {/* Renderiza el mapa */}
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
-
     </div>
   );
 }
