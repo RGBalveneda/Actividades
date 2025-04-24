@@ -1,7 +1,9 @@
 import React, { useState, useCallback } from 'react';
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
-import Header from './components/Header'; // Asegúrate que la ruta sea correcta
-import Footer from './components/Footer'; // Asegúrate que la ruta sea correcta
+import Header from '../components/Header'; // Asegúrate que la ruta sea correcta
+import Footer from '../components/Footer'; // Asegúrate que la ruta sea correcta
+import miGif2 from '../assets/19.gif'; // Asegúrate de que la ruta sea correcta
+
 
 // --- Estilos ---
 // Estilos para el contenedor del mapa
@@ -47,11 +49,8 @@ export default function Maps() {
   const handleInfoWindowClose = useCallback(() => {
     setInfoWindowVisible(false);
   }, []); // Sin dependencias, la función no cambia
-
-  // --- Comprobación de API Key (Antes del renderizado principal) ---
   if (!googleMapsApiKey) {
     console.error("Error: Falta la API Key de Google Maps.");
-    // Es mejor mostrar un mensaje de error más descriptivo al usuario
     return (
       <div style={{ padding: '20px', color: 'red', border: '1px solid red', margin: '20px' }}>
         Error de Configuración: La funcionalidad de mapa no está disponible.
@@ -59,7 +58,6 @@ export default function Maps() {
       </div>
     );
   }
-   // Advertencia si la clave parece ser la de ejemplo (opcional pero útil en desarrollo)
    if (googleMapsApiKey === "AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik") {
     console.warn("Advertencia: Estás usando una clave API de ejemplo o expuesta directamente en el código. Asegúrate de reemplazarla y protegerla usando variables de entorno para producción.");
    }
@@ -70,12 +68,12 @@ export default function Maps() {
         <Header />
       </div>
 
-      <div className="div2" style={{ textAlign: 'center', margin: '20px 0' }}> {/* Estilo inline para centrar texto */}
-        <h1 className="text-3xl font-bold">Bienvenido a la actividad 5</h1> {/* Asume Tailwind CSS */}
+      <div className="div2" style={{ textAlign: 'center'}}> 
+        <h1 className="text-3xl font-bold">Bienvenido a la actividad 5</h1> 
       </div>
 
-      <div className="div3" style={{ textAlign: 'center', marginBottom: '20px' }}> {/* Estilo inline para centrar texto */}
-        <p className="mt-4">Esta es la pestaña de "Maps"</p> {/* Asume Tailwind CSS */}
+      <div className="div3" style={{ textAlign: 'center'}}> 
+        <p className="mt-4">Mapa localizado en la facultad de Informática Mazatlán</p>
       </div>
 
       {/* Contenedor del mapa y su lógica */}
@@ -113,6 +111,17 @@ export default function Maps() {
       <div className="div5">
         <Footer />
       </div>
+
+      <div className="div6">
+        <img className="img1"
+          src={miGif2}  // <--- ¡Usa la variable importada aquí!
+        />
+</div>
+      <div className="div7">
+        <img className="img1"
+          src={miGif2}  // <--- ¡Usa la variable importada aquí!
+        />
     </div>
+      </div>
   );
 }

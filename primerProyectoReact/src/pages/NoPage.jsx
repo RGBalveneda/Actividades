@@ -16,33 +16,27 @@ export default function NoPage() {
                     </div>
         
                     <div class="div3">
-                    <p className="mt-4">Estas en la pestaña de "Contact"</p>
+                    <p className="mt-4"> Te dije que estaba fuera de servicio</p>
                     </div>
         
                     <div class="div4">  
-                        <img 
-                            src={miGif}  // <--- ¡Usa la variable importada aquí!
-                            alt="Descripción útil de mi animación GIF" 
-                            className="mt-6 w-80 h-auto rounded-lg shadow-lg" 
-                        />
+            <img className="img2"
+                    src={miGif}  // <--- ¡Usa la variable importada aquí!
+            />
                     </div>
         
                     <div class="div5">
                         <Footer />
                     </div>
                     <div class="div6">
-                    <img 
-                            src={miGif2}  // <--- ¡Usa la variable importada aquí!
-                            alt="Descripción útil de mi animación GIF" 
-                            className="mt-6 w-80 h-auto rounded-lg shadow-lg" 
-                    />
+            <img className="img1"
+                    src={miGif2}  // <--- ¡Usa la variable importada aquí!
+            />
                         </div>
                     <div class="div7">
-                    <img 
-                            src={miGif2}  // <--- ¡Usa la variable importada aquí!
-                            alt="Descripción útil de mi animación GIF" 
-                            className="mt-6 w-80 h-auto rounded-lg shadow-lg" 
-                    />
+            <img className="img1"
+                    src={miGif2}  // <--- ¡Usa la variable importada aquí!
+            />
                     </div>
                         
                         

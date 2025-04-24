@@ -1,4 +1,4 @@
-import miGif from '../assets/3.gif'; // 1. IMPORTA TU GIF AQUÍ
+import miGif from '../assets/7.gif'; // 1. IMPORTA TU GIF AQUÍ
 import miGif2 from '../assets/2.gif'; 
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
@@ -7,42 +7,36 @@ import Footer from "../components/Footer.jsx";
 
 export default function Contact() {
     return (
-      <div class="parent">
-            <div class="div1">
+      <div className="parent">
+            <div className="div1">
                 <Header />
             </div>
            
-            <div class="div2">
+            <div className="div2">
             <h1 className="text-3xl font-bold">Bienvenido a mi pagina</h1>
             </div>
 
-            <div class="div3">
+            <div className="div3">
             <p className="mt-4">Estas en la pestaña de "Contact"</p>
             </div>
 
-            <div class="div4">  
-                <img 
-                    src={miGif}  // <--- ¡Usa la variable importada aquí!
-                    alt="Descripción útil de mi animación GIF" 
-                    className="mt-6 w-80 h-auto rounded-lg shadow-lg" 
-                />
+            <div className="div4">  
+              <img className="img2"
+                      src={miGif}  // <--- ¡Usa la variable importada aquí!
+              />
             </div>
 
-            <div class="div5">
+            <div className="div5">
                 <Footer />
             </div>
-            <div class="div6">
-            <img 
+            <div className="div6">
+            <img className="img1"
                     src={miGif2}  // <--- ¡Usa la variable importada aquí!
-                    alt="Descripción útil de mi animación GIF" 
-                    className="mt-6 w-80 h-auto rounded-lg shadow-lg" 
             />
                 </div>
-            <div class="div7">
-            <img 
+            <div className="div7">
+            <img className="img1"
                     src={miGif2}  // <--- ¡Usa la variable importada aquí!
-                    alt="Descripción útil de mi animación GIF" 
-                    className="mt-6 w-80 h-auto rounded-lg shadow-lg" 
             />
             </div>
                 

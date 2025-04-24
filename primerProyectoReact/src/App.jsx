@@ -1,16 +1,14 @@
-// /src/App.jsx
-
 import * as React from "react";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/contact.jsx";
 import NoPage from "./pages/NoPage.jsx";
-import BasicTable from "./mitabla.jsx";
-import Boton from "./boton.jsx";
-import SaludoPadre from "./context.jsx"; // Importa el componente padre
-import API from "./api.jsx"; // Importa el componente de la API
-import Intro from "./maps.jsx";
+import BasicTable from "./pages/mitabla.jsx";
+import Boton from "./pages/boton.jsx";
+import SaludoPadre from "./pages/context.jsx"; // Importa el componente padre
+import API from "./pages/api.jsx"; // Importa el componente de la API
+import Intro from "./pages/maps.jsx";
 
 function App() {
   return (
@@ -18,7 +16,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/Actividad1" element={<BasicTable />} />

@@ -6,12 +6,11 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import miGif from './assets/4.gif';
-import miGif2 from './assets/2.gif'; 
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
-import Card from './card.jsx';
-import './App.css'
+import miGif2 from '../assets/2.gif'; 
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.jsx";
+import Card from '../components/card.jsx';
+import '../styles/App.css'
 
 
 const Persona = [
@@ -76,17 +75,13 @@ export default function BasicTable() {
                 <Footer />
             </div>
             <div class="div6">
-            <img 
+            <img className="img1"
                     src={miGif2}  // <--- ¡Usa la variable importada aquí!
-                    alt="Descripción útil de mi animación GIF" 
-                    className="mt-6 w-80 h-auto rounded-lg shadow-lg" 
             />
                 </div>
             <div class="div7">
-            <img 
+            <img className="img1"
                     src={miGif2}  // <--- ¡Usa la variable importada aquí!
-                    alt="Descripción útil de mi animación GIF" 
-                    className="mt-6 w-80 h-auto rounded-lg shadow-lg" 
             />
             </div>
                 

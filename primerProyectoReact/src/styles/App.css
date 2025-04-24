@@ -70,24 +70,22 @@ p {
   text-align: center;
 }
 
-/* Botones */
+
 button {
-  display: block; /* !!! Añade esta línea !!! */
+  display: block; 
   background-color: var(--primary-color); 
   color: white;
   border: 1px solid transparent; 
-  padding: 1em 11em; /* Ojo: 11em es un padding horizontal MUY grande */
+  padding: 1em 11em; 
   border-radius: 8px; 
   cursor: pointer;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit; 
-  margin-top: 400px; /* Margen superior muy grande */
-  margin-bottom: 20px; 
-  margin-left: auto; /* Ahora sí debería funcionar */
-  margin-right: auto; /* Ahora sí debería funcionar */
-  /* Considera añadir un width o max-width si es necesario */
-  /* width: fit-content; */ /* Podría ayudar si el padding es muy grande */
+  margin-top: auto; 
+  margin-bottom: auto; 
+  margin-left: auto; /* Centrado horizontal */
+  margin-right: auto; 
 }
 
 
@@ -138,18 +136,26 @@ Header {
   padding: 10px; /* Espaciado interno */
   border-bottom: 1px solid var(--border-color); /* Borde inferior */
 }
-img { /* Asumiendo que te refieres a la etiqueta img */
+.img1 { 
   max-width: 100%; 
   height: 200px;    /* ¡Ojo! Altura fija + max-width % puede distorsionar o recortar de forma inesperada */
-  object-fit: cover; 
   border-radius: 8px; /* Bordes redondeados */
-  
   margin: 10px 0; /* Espaciado vertical */
   display: block; /* Asegura que la imagen ocupe el ancho completo del contenedor */
   margin-left: auto; /* Centrado horizontal */
   margin-right: auto; /* Centrado horizontal */
+  margin-top: auto;
+  margin-bottom: 20px; /* Centrado vertical */
 }
 
+.img2 {
+  max-width: 100%;
+  height: 300px;    /* ¡Ojo! Altura fija + max-width % puede distorsionar o recortar de forma inesperada */
+  border-radius: 8px; /* Bordes redondeados */
+  margin: 0px 0; /* Espaciado vertical */
+  margin-left: auto; /* Centrado horizontal */
+  margin-right: auto; /* Centrado horizontal */
+}
 
 /* Estilos para las cuadriculas de los divs */
 .parent {
@@ -252,3 +258,4 @@ height: auto;
   object-fit: cover;
   filter: brightness(0.8);
 }
+
