@@ -1,66 +1,112 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Stack, Box } from '@mui/material';
-export default function Header() {
-  // Datos para los botones de navegación
-  const navItems = [
-    { label: 'Home', href: '/home' },
-    { label: 'About', href: '/about' },
-    { label: 'Services', href: '/services' },
-    { label: 'Contact', href: '/contact' },
-    { label: 'Actividad 1', href: '/actividad1' },
-    { label: 'Actividad 2', href: '/actividad2' },
-    { label: 'Actividad 3', href: '/actividad3' },
-    { label: 'Actividad 4', href: '/actividad4' },
-    { label: 'Actividad 5', href: '/actividad5' },
-  ];
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import Button from './Button';
 
+
+const Header = () => {
   return (
-    <AppBar position="static" >
-      <Toolbar>
-        {/* Título del sitio */}
-        <Typography
-          variant="h6"
-          component="div"
-          // sx prop para estilos:
-          sx={{
-            flexGrow: 1, // Ocupa el espacio disponible empujando lo demás a la derecha
-            fontSize: '1.5rem', // Tamaño de fuente (similar a text-2xl)
-            fontWeight: 'bold', // Negrita (similar a font-bold)
-          }}
-        >
-       Repositorio de Actividades
-        </Typography>
+    <StyledWrapper>
+      <div className="nav">
+        <Link to="/">
+          
+        </Link>
+             
+            <Link to="/" className='btn'>
+            Home
+            </Link>
 
-        {/* Usamos Stack para agrupar y espaciar los botones */}
-        <Stack
-          direction="row" // Alinea los botones horizontalmente
-          spacing={1} // Espacio entre botones (usa theme.spacing, por defecto 8px)
-          sx={{ display: { xs: 'none', sm: 'flex' } }} // Oculta en pantallas extra-pequeñas, muestra como flex en pequeñas y mayores
-        >
-          {navItems.map((item) => (
-            <Button
-              key={item.label}
-              variant="contained" // Mantenemos el estilo de botón que tenías
-              color="primary"      // Mantenemos el color primario
-              href={item.href}
-              // Si usas react-router-dom:
-              // component={RouterLink}
-              // to={item.href}
-            >
-              {item.label}
-            </Button>
-          ))}
-        </Stack>
-         {/* Podrías añadir aquí un IconButton con un menú para pantallas 'xs' */}
-         {/* Ejemplo rápido (requiere importar IconButton y Menu, y manejar estado):
-         <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
-            <IconButton color="inherit" aria-label="menu">
-              <MenuIcon /> {/* Necesitas importar MenuIcon de @mui/icons-material *\/}
-            </IconButton>
-         </Box>
-         */}
+          <Link to="/contact" className='btn'>
+            Contact
+            </Link>
 
-      </Toolbar>
-    </AppBar>
+            <Link to="/about" className='btn'>
+            About
+            </Link>
+
+            <Link to="/services" className='btn'>
+            Services
+            </Link>
+
+            <Link to="/Actividad1" className='btn'>
+            Actividad 1
+            </Link>
+
+            <Link to="/Actividad2" className='btn'>
+            Actividad 2
+            </Link>
+
+            <Link to="/Actividad3" className='btn'>
+            Actividad 3
+            </Link>
+
+            <Link to="/Actividad4" className='btn'>
+            Actividad 4
+            </Link>
+  
+            <Link to="/Actividad5" className='btn'>
+            Actividad 5
+            </Link>
+
+            <a href="https://github.com/RGBalveneda/Actividades.git" target="_blank" rel="noopener noreferrer">
+            <Button></Button>  
+            </a>
+        </div>
+      
+    </StyledWrapper>
   );
-}
+};
+
+const StyledWrapper = styled.div`
+  .nav {
+    width: auto;
+    height: 100px;
+    background: #1e1a19;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .container {
+    display: flex;
+    gap: 10px;
+    padding: 1em 2em;
+    position: relative;
+  }
+
+  .btn {
+    position: relative;
+    padding: 1em 1.5em;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-weight: 500;
+    border-radius: 34px;
+  }
+
+  .btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid transparent;
+    border-radius: 34px;
+    transition: all 0.4s ease;
+    pointer-events: none;
+  }
+
+  .btn:hover::before {
+    border-color: #f5c518;
+    box-shadow: 0 0 10px rgba(245, 197, 24, 0.4);
+    transform: scale(1.05);
+  }
+
+  .btn:hover {
+    background: rgba(245, 197, 24, 0.1); /* dorado translúcido */
+    transform: translateY(-2px);
+  }
+`;
+
+
+
+export default Header;

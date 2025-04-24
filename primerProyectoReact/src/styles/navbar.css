@@ -1,0 +1,99 @@
+/* From Uiverse.io by SelfMadeSystem */
+.outline {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.rect {
+    stroke-dashoffset: 5;
+    stroke-dasharray: 0 0 10 40 10 40;
+    transition: 0.5s;
+    stroke: #fff; /* Color del borde animado */
+}
+
+.nav {
+    position: relative; /* Necesario para que .container se posicione dentro de .nav */
+    width: 400px;
+    height: 60px;
+    /* Puedes añadir un fondo aquí si quieres un fondo SÓLIDO para la barra de navegación */
+    /* background-color: #333; */ /* Ejemplo: fondo gris oscuro */
+}
+
+.container {
+    position: absolute; /* Se posiciona sobre .nav */
+    inset: 0; /* Cubre completamente .nav */
+    /* background: #bef6; */ /* <-- LÍNEA ELIMINADA: Ya no aplica el fondo azul */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5em;
+}
+
+/* --- Resto de los estilos de hover para la animación (sin cambios) --- */
+
+.container:hover .outline .rect {
+    transition: 999999s;
+    stroke-dashoffset: 1;
+    stroke-dasharray: 0;
+}
+
+.btn {
+    padding: 0.5em 1.5em;
+    color: #fff; /* Color del texto del botón */
+    cursor: pointer;
+    transition: 0.1s;
+    /* background: transparent; */ /* Asegúrate que no tenga fondo propio si no lo quieres */
+    z-index: 1; /* Asegura que los botones estén sobre cualquier fondo del .nav */
+    position: relative; /* Añadido para asegurar que z-index funcione correctamente */
+}
+
+.btn:hover {
+    background: #fff3; /* Fondo semi-transparente al pasar el ratón sobre el botón */
+}
+
+.btn:nth-child(1):hover ~ svg .rect {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 2 8 73.3 8 10.7;
+}
+
+.btn:nth-child(2):hover ~ svg .rect {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 12.6 9.5 49.3 9.5 31.6;
+}
+
+.btn:nth-child(3):hover ~ svg .rect {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 24.5 8.5 27.5 8.5 55.5;
+}
+
+.btn:nth-child(4):hover ~ svg .rect {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0 34.7 6.9 10.2 6.9 76;
+}
+
+/* --- Corrección en la transición al quitar el hover del botón --- */
+/* Esta regla asegura que la animación vuelva suavemente al estado inicial
+   cuando el ratón sale de un botón pero sigue sobre el contenedor.
+   Se elimina !important si no es estrictamente necesario y se asegura
+   que los valores coincidan con el estado inicial de .rect */
+.container:hover .btn:hover ~ .outline .rect {
+    /* No se necesita esta regla específica si .container:hover ya maneja la transición al salir */
+}
+
+/* Asegura que al salir del botón, la animación vuelva al estado definido en .rect */
+.container:hover .outline .rect {
+    transition: 0.5s; /* Restaura la transición corta al quitar hover de un botón */
+    /* stroke-dashoffset y stroke-dasharray ya están definidos en .rect y se aplican por defecto */
+}
+
+/* Si quieres que la animación se REINICIE al quitar el hover del botón,
+   incluso si sigues sobre el contenedor, podrías necesitar algo como: */
+.container .btn ~ .outline .rect {
+    /* Define el estado de reinicio aquí si es necesario,
+       pero usualmente se deja que .rect lo maneje */
+    stroke-dashoffset: 5;
+    stroke-dasharray: 0 0 10 40 10 40;
+    transition: 0.5s;
+}
