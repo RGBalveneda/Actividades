@@ -1,8 +1,11 @@
 import React, { useState, useCallback } from 'react';
-import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, Marker, InfoWindow, DirectionsService } from '@react-google-maps/api';
 import Header from '../components/Header'; 
 import Footer from '../components/Footer'; 
 import miGif2 from '../assets/19.gif'; 
+import carro from '../assets/carro.png'; 
+import bicicleta from '../assets/bicicleta.png';  
+import caminar from '../assets/andar.png';
 
 
 
@@ -34,16 +37,22 @@ const mapOptions = {
 };
 
 
-const googleMapsApiKey = "AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik"; // <-- ¡CLAVE EXPUESTA! REEMPLAZAR/PROTEGER
+function getTravelMode() {
+    const travelMode = () => {
+        const modes = ['DRIVING', 'BICYCLING', 'WALKING'];
+    }
+}
+
+const googleMapsApiKey = "AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik";
 
 
-export default function Maps() {
+export default function Maps2() {
   const [infoWindowVisible, setInfoWindowVisible] = useState(false);
 
  
   const handleMarkerClick = useCallback(() => {
     setInfoWindowVisible(true);
-  }, []); // Sin dependencias, la función no cambia
+  }, []); 
 
   const handleInfoWindowClose = useCallback(() => {
     setInfoWindowVisible(false);
@@ -60,6 +69,7 @@ export default function Maps() {
    if (googleMapsApiKey === "AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik") {
     console.warn("Advertencia: Estás usando una clave API de ejemplo o expuesta directamente en el código. Asegúrate de reemplazarla y protegerla usando variables de entorno para producción.");
    }
+   
 
   return (
     <div className="parent">
@@ -68,11 +78,11 @@ export default function Maps() {
       </div>
 
       <div className="div2" style={{ textAlign: 'center'}}> 
-        <h1 className="text-3xl font-bold">Bienvenido a la actividad 5</h1> 
+        <h1 className="text-3xl font-bold">Bienvenido a la actividad 6</h1> 
       </div>
 
       <div className="div3" style={{ textAlign: 'center'}}> 
-        <p className="mt-4">Mapa localizado en la facultad de Informática Mazatlán</p>
+        <p className="mt-4">Mapa localizado en la facultad de Informática Mazatlán que viaja en carro hacia la plazuela machado</p>
       </div>
 
  
@@ -84,22 +94,41 @@ export default function Maps() {
             zoom={15} 
             options={mapOptions}
           >
+            <DirectionsService
+              options={{
+                destination: destino,
+                origin: center,
+                travelMode: 'DRIVING',
+              }}
+              callback={(response) => {
+                if (response && response.status === 'OK') {
+                  console.log('Ruta calculada:', response);
+                } else {
+                  console.error('Error al calcular la ruta:', response);
+                }
+              }}
+            />
             <Marker
               position={center}
               onClick={handleMarkerClick}
-              title={"Facultad de Informática Mazatlán"} // Añade un tooltip al pasar el mouse
+              title={"Facultad de Informática Mazatlán"}
+            />
+            <Marker
+              position={destino}
+              onClick={handleMarkerClick}
+              title={"Plazuela Machado"}
             >
+            
               {infoWindowVisible && (
                 <InfoWindow
                   position={center}
                   onCloseClick={handleInfoWindowClose}
                 >
-                  {/* Contenido del InfoWindow */}
-                  <div style={{ padding: '5px' }}> {/* Añade algo de padding interno */}
+                  <div style={{ padding: '5px' }}> 
                     <h3 style={{ margin: '0 0 5px 0' }}>Facultad de Informática Mazatlán</h3>
                     <p style={{ margin: '2px 0' }}><strong>Coordenadas:</strong></p>
-                    <p style={{ margin: '2px 0' }}>Lat: {center.lat.toFixed(6)}</p> {/* Limita decimales */}
-                    <p style={{ margin: '2px 0' }}>Lng: {center.lng.toFixed(6)}</p> {/* Limita decimales */}
+                    <p style={{ margin: '2px 0' }}>Lat: {center.lat.toFixed(6)}</p>
+                    <p style={{ margin: '2px 0' }}>Lng: {center.lng.toFixed(6)}</p> 
                   </div>
                 </InfoWindow>
               )}
@@ -112,14 +141,20 @@ export default function Maps() {
       </div>
 
       <div className="div6">
-        <img className="img1"
-          src={miGif2}  // <--- ¡Usa la variable importada aquí!
+        <img className="img1" onClick={() => window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank")}
+          src={miGif2}  
         />
-</div>
+
+      </div>
       <div className="div7">
-        <img className="img1"
-          src={miGif2}  // <--- ¡Usa la variable importada aquí!
+        <getTravelMode />
+        <img classname ="img1" onClick={() => 
+            
+        }
+          src={carro}
         />
+        
+        
     </div>
       </div>
   );

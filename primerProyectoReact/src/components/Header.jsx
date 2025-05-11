@@ -47,7 +47,10 @@ const Header = () => {
             <Link to="/Actividad5" className='btn'>
             Actividad 5
             </Link>
-
+           
+            <Link to="/Actividad6" className='btn'>
+            Actividad 6
+            </Link>
             <a href="https://github.com/RGBalveneda/Actividades.git" target="_blank" rel="noopener noreferrer">
             <Button></Button>  
             </a>
