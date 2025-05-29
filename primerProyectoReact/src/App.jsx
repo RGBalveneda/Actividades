@@ -10,6 +10,9 @@ import SaludoPadre from "./pages/context.jsx"; // Importa el componente padre
 import API from "./pages/api.jsx"; // Importa el componente de la API
 import Intro from "./pages/maps.jsx";
 import Maps2 from "./pages/maps2.jsx";
+import Maps3 from "./pages/maps3.jsx";
+import Maps4 from "./pages/maps4.jsx"; // Importa el componente de mapas
+
 
 function App() {
   return (
@@ -26,6 +29,10 @@ function App() {
           <Route path="/Actividad4" element={<API />} /> {/* Renderiza la tabla de la API */}
           <Route path="/Actividad5" element={<Intro />} /> {/* Renderiza el mapa */}
           <Route path="/Actividad6" element={<Maps2 />} /> {/* Renderiza el mapa */}
+          <Route path="/Actividad7" element={<Maps3 />} /> {/* Renderiza el mapa */}
+          <Route path="/Actividad8" element={<Maps4 />} /> {/* Renderiza el mapa */}
+
+          
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
