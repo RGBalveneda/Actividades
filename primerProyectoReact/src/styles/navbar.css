@@ -78,9 +78,7 @@
    cuando el ratón sale de un botón pero sigue sobre el contenedor.
    Se elimina !important si no es estrictamente necesario y se asegura
    que los valores coincidan con el estado inicial de .rect */
-.container:hover .btn:hover ~ .outline .rect {
-    /* No se necesita esta regla específica si .container:hover ya maneja la transición al salir */
-}
+
 
 /* Asegura que al salir del botón, la animación vuelva al estado definido en .rect */
 .container:hover .outline .rect {

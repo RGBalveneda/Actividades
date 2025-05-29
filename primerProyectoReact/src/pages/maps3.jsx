@@ -54,7 +54,7 @@ const googleMapsApiKey = "AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik";
 
 
 
-export default function Maps2() {
+export default function Maps3() {
   const [infoWindowVisible, setInfoWindowVisible] = useState(false);
 
  
@@ -84,11 +84,11 @@ export default function Maps2() {
       </div>
 
       <div className="div2" style={{ textAlign: 'center'}}> 
-        <h1 className="text-3xl font-bold">Bienvenido a la actividad 6</h1> 
+        <h1 className="text-3xl font-bold">Bienvenido a la actividad 7</h1> 
       </div>
 
       <div className="div3" style={{ textAlign: 'center'}}> 
-        <p className="mt-4">Mapa localizado en la facultad de Informática Mazatlán que viaja en carro hacia la plazuela machado</p>
+        <p className="mt-4">Aplicar el uso de la API de Google Maps en una aplicación React para mostrar múltiples ubicaciones y agrupar marcadores mediante MarkerClusterer, mejorando la visualización y eficiencia en mapas interactivos.</p>
       </div>
 
  

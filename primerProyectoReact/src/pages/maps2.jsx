@@ -28,7 +28,7 @@ const destino = {
   lng: -106.42318
 };
 
-const [directions , setDirections] = useState(null);
+
 
 
 const mapOptions = {
@@ -53,6 +53,8 @@ const googleMapsApiKey = "AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik";
 
 export default function Maps2() {
   const [infoWindowVisible, setInfoWindowVisible] = useState(false);
+
+  const [directions , setDirections] = useState(null);
 
  
   const handleMarkerClick = useCallback(() => {
