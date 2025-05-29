@@ -17,4 +17,4 @@ que esta pagina probablemente se convierta en una especie de CV interactivo o al
 Sin nada mas que añadir, muchas gracias por su clase profe, me enseno mas que muchos otros profes y mas que eso me dio la
 seguridad se saber que si lo intento, puedo aprender a programar sin ningun esfuerzo.
 Mucha suerte en este su nuevo trabajo o si consigue en microsoft o alguna empresa asi mucho mejor, sino, me avisa y voy y 
-le compro a su polleria 
+le compro a su polleria cuando la abra. 
