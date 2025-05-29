@@ -1,11 +1,8 @@
 import React, { useState, useCallback } from 'react';
-import { GoogleMap, LoadScript, Marker, InfoWindow, DirectionsService } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, Marker, InfoWindow, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
 import Header from '../components/Header'; 
 import Footer from '../components/Footer'; 
 import miGif2 from '../assets/19.gif'; 
-import carro from '../assets/carro.png'; 
-import bicicleta from '../assets/bicicleta.png';  
-import caminar from '../assets/andar.png';
 
 
 
@@ -31,19 +28,27 @@ const destino = {
   lng: -106.42318
 };
 
+const [directions , setDirections] = useState(null);
+
 
 const mapOptions = {
   
 };
 
 
-function getTravelMode() {
-    const travelMode = () => {
-        const modes = ['DRIVING', 'BICYCLING', 'WALKING'];
-    }
-}
+
+
+
+
+
 
 const googleMapsApiKey = "AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik";
+
+
+
+
+
+
 
 
 export default function Maps2() {
@@ -66,9 +71,7 @@ export default function Maps2() {
       </div>
     );
   }
-   if (googleMapsApiKey === "AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik") {
-    console.warn("Advertencia: Estás usando una clave API de ejemplo o expuesta directamente en el código. Asegúrate de reemplazarla y protegerla usando variables de entorno para producción.");
-   }
+
    
 
   return (
@@ -93,6 +96,7 @@ export default function Maps2() {
             center={center}
             zoom={15} 
             options={mapOptions}
+            
           >
             <DirectionsService
               options={{
@@ -102,12 +106,19 @@ export default function Maps2() {
               }}
               callback={(response) => {
                 if (response && response.status === 'OK') {
+                  setDirections(response);
                   console.log('Ruta calculada:', response);
                 } else {
                   console.error('Error al calcular la ruta:', response);
                 }
               }}
+              
             />
+
+              {directions && (
+    <DirectionsRenderer directions={directions} />
+              )}
+
             <Marker
               position={center}
               onClick={handleMarkerClick}
@@ -147,14 +158,7 @@ export default function Maps2() {
 
       </div>
       <div className="div7">
-        <getTravelMode />
-        <img classname ="img1" onClick={() => 
-            
-        }
-          src={carro}
-        />
-        
-        
+
     </div>
       </div>
   );
